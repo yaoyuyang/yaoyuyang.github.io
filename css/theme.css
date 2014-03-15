@@ -15,7 +15,7 @@ body {
 
 .navbar-inner {
     background-color: red;
-/*    background-image: linear-gradient(to bottom, blue, green); */
+    background-image: none;
     background-repeat: repeat-x;
     border: 1px solid yellow;
     border-radius: 4px 4px 4px 4px;
