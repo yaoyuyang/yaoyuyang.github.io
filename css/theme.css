@@ -13,6 +13,42 @@ body {
   margin: 5px 0;
 }
 
+.navbar-custom {
+  margin: 0 20px 0 0;
+  background-color:rgba(255,255,255,0.75);
+  /*background-image: url('/images/banner.png'); /*no-repeat fixed top;*/ 
+  border: none;
+  height: 60px;
+}
+
+.nav > li {
+}
+
+.nav > li > a:hover {
+  color: #051 !important;
+}
+
+.nav > li > a {
+  color: #000 !important;
+  padding-top: 23px;
+  height: 60px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.navbar-brand {
+  font-size: 24pt;
+  color: #160 !important;
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin-top: 5px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.navbar-brand:hover {
+  color: black !important;
+}
+
+
 .photo {
   padding: 10px;
   width: 100%;
