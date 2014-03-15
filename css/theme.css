@@ -13,6 +13,18 @@ body {
   margin: 5px 0;
 }
 
+.navbar-inner {
+    background-color: red;
+    background-image: linear-gradient(to bottom, blue, green);
+    background-repeat: repeat-x;
+    border: 1px solid yellow;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .navbar-custom {
   margin: 0 20px 0 0;
   background-color:rgba(255,255,255,0.75);
