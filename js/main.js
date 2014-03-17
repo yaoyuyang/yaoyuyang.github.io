@@ -27,7 +27,7 @@ function drawMarkersMap() {
  ]);
 
  var options = {
-   region: 030,
+   region: '030',
    displayMode: 'markers',
    colorAxis: {colors: ['#e7711c', '#4374e0']}
  };
