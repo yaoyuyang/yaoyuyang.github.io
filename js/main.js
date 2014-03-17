@@ -1,21 +1,21 @@
-     google.load('visualization', '1', {'packages': ['geochart']});
-     google.setOnLoadCallback(drawMarkersMap);
+google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawMarkersMap);
 
-      function drawMarkersMap() {
-      var data = google.visualization.arrayToDataTable([
-        ['City',   'Time'],
-        ['Yuanping', 'Hometown'],
-        ['Taiyuan','2006-2007'],
-        ['Shanghai','2007-2011'],
-        ['Beijing','2008,2009,2011,2012,2013']
-      ]);
+ function drawMarkersMap() {
+ var data = google.visualization.arrayToDataTable([
+   ['City',   'Duration'],
+   ['Yuanping', 6],
+   ['Taiyuan',1],
+   ['Shanghai',4],
+   ['Beijing',0.2]
+ ]);
 
-      var options = {
-        region: 'CN',
-        displayMode: 'markers',
-        colorAxis: {colors: ['green', 'blue']}
-      };
+ var options = {
+   region: 'CN',
+   displayMode: 'markers',
+   colorAxis: {colors: ['green']}
+ };
 
-      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    };
+ var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+ chart.draw(data, options);
+};
