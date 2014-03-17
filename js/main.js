@@ -23,7 +23,6 @@ function drawMarkersMap() {
    ['Dunhuang', 0.1],
    ['Jiayuguan', 0.1],
    ['Changsha', 0.1],
-   ['Seoul', 0.1]
  ]);
 
  var options = {
