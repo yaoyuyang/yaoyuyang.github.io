@@ -66,7 +66,7 @@ body {
 $bgDefault      : #99ffff;
 $bgHighlight    : #99ffff;
 $colDefault     : #99ffff;
-$colHover       : #ffbbbc;
+$colHover       : #99ffff;
 .navbar-default {
   background-color: $bgDefault;
   border-color: $bgHighlight;
