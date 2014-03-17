@@ -56,7 +56,7 @@ body {
 }
 
 .navbar-brand:hover {
-  color: black !important;
+  color: green !important;
 }
 
 .navbar-nav > li > a {
