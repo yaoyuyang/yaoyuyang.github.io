@@ -25,7 +25,7 @@ body {
 
 .navbar-custom {
   margin: 0 20px 0 0;
-  background-color: #99ffff;
+  background-color:rgba(255,255,255,0.75);
   /*background-image: url('/images/banner.png'); /*no-repeat fixed top;*/ 
   background-image: none;
   border: none;
