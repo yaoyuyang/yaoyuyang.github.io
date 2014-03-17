@@ -64,7 +64,7 @@ body {
 }
 
 $bgDefault      : #99ffff;
-$bgHighlight    : #c0392b;
+$bgHighlight    : #99ffff;
 $colDefault     : #ecf0f1;
 $colHover       : #ffbbbc;
 .navbar-default {
