@@ -63,7 +63,7 @@ body {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
-$bgDefault      : #999999;
+$bgDefault      : #99ffff;
 $bgHighlight    : #c0392b;
 $colDefault     : #ecf0f1;
 $colHover       : #ffbbbc;
