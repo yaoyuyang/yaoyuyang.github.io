@@ -9,11 +9,11 @@ google.setOnLoadCallback(drawMarkersMap);
    ['Shanghai', 4, 'Collge study at SJTU'],
    ['Beijing', 0.2, 'Visited several times'],
    ['Dalian', 0.1, 'A beautiful city'],
-   ['Shenyang',0.1],
-   ['Shijiazhuang',0.1],
-   ['Jinan',0.1],
-   ['Taian',0.1],
-   ['Yinchuan',0.1]
+   ['Shenyang',0.1,'Visited while in college'],
+   ['Shijiazhuang',0.1,'best friend\'s hometown'],
+   ['Jinan',0.1,'Baotuquan'],
+   ['Taian',0.1,'The gorgeous moutain'],
+   ['Yinchuan',0.1,'A northwest perl']
  ]);
 
  var options = {
