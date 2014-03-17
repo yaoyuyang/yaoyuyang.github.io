@@ -1,7 +1,7 @@
 google.load('visualization', '1', {'packages': ['geochart']});
 google.setOnLoadCallback(drawMarkersMap);
 
- function drawMarkersMap() {
+function drawMarkersMap() {
  var data = google.visualization.arrayToDataTable([
    ['City',  'Duration'],
    ['Yuanping', 6],
