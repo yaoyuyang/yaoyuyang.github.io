@@ -42,7 +42,7 @@ body {
   color: #333 !important;
   padding-top: 23px;
   height: 60px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+/* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
 }
 
 .navbar-nav > li > a {
