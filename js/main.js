@@ -7,7 +7,7 @@ google.setOnLoadCallback(drawMarkersMap);
    ['Yuanping', 6],
    ['Taiyuan',1],
    ['Shanghai',4],
-   ['Beijing',0.2],
+   ['Beijing',0.5],
    ['Dalian', 0.1],
    ['Shenyang',0.1],
    ['Shijiazhuang', 0.1],
