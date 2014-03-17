@@ -3,12 +3,12 @@ google.setOnLoadCallback(drawMarkersMap);
 
  function drawMarkersMap() {
  var data = google.visualization.arrayToDataTable([
-   ['City',   'Duration'],
-   ['Yuanping', 6],
-   ['Taiyuan', 1],
-   ['Shanghai', 4],
-   ['Beijing', 0.2],
-   ['Dalian', 0.1],
+   ['City',   'Duration', 'Details'],
+   ['Yuanping', 6, 'Middle and high school here'],
+   ['Taiyuan', 1, 'Stayed a year after high school graduation'],
+   ['Shanghai', 4, 'Collge study at SJTU'],
+   ['Beijing', 0.2, 'Visited several times'],
+   ['Dalian', 0.1, 'A beautiful city'],
    ['Shenyang',0.1],
    ['Shijiazhuang',0.1],
    ['Jinan',0.1],
