@@ -19,7 +19,7 @@ google.setOnLoadCallback(drawMarkersMap);
  var options = {
    region: 'CN',
    displayMode: 'markers',
-   colorAxis: {colors: ['green']}
+   colorAxis: {colors: ['green','blue']}
  };
 
  var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
