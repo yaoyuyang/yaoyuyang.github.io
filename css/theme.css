@@ -45,10 +45,6 @@ body {
 /* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
 }
 
-.navbar-nav > li > a {
-  text-shadow: none;
-}
-
 .photo {
   padding: 10px;
   width: 100%;
