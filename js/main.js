@@ -4,8 +4,8 @@ google.setOnLoadCallback(drawMarkersMap);
  function drawMarkersMap() {
  var data = google.visualization.arrayToDataTable([
    ['City',    'Details'],
-   ['Yuanping', 'Middle and high school here'],
-   ['Taiyuan', 'Stayed a year after high school graduation'],
+   ['Yuanping', 'Yuanping\nMiddle and high school here'],
+   ['Taiyuan', 'Taiyuan\nStayed a year after high school graduation'],
    ['Shanghai', 'Collge study at SJTU'],
    ['Beijing', 'Visited several times'],
    ['Dalian', 'A beautiful city'],
