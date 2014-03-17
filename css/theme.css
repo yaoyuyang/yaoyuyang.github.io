@@ -45,19 +45,6 @@ body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.navbar-brand {
-  font-size: 24pt;
-  color: #160 !important;
-  letter-spacing: -1px;
-  font-weight: bold;
-  margin-top: 5px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-
-.navbar-brand:hover {
-  color: black !important;
-}
-
 .navbar-nav > li > a {
   text-shadow: none;
 }
