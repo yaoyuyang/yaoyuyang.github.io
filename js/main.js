@@ -30,7 +30,7 @@ function drawMarkersMap() {
    ['Seattle', 2],
    ['Portland',0.1],
    ['Boston',0.1],
-   ['Charlotteville',0.8],
+   ['Charlottesville',0.8],
    ['Washington DC', 0.1],
    ['Los Angles',0.1],
  ]);
