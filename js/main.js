@@ -49,6 +49,6 @@ function drawMarkersMap() {
 
  var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
  chart.draw(dataAsia, optionsAsia);
- var chart = new google.visualization.GeoChart(document.getElementById('map_usa'));
- chart.draw(dataUSA,optionsUSA);
+ var chart2 = new google.visualization.GeoChart(document.getElementById('map_usa'));
+ chart2.draw(dataUSA,optionsUSA);
 };
