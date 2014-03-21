@@ -2,7 +2,7 @@ google.load('visualization', '1', {'packages': ['geochart']});
 google.setOnLoadCallback(drawMarkersMap);
 
 function drawMarkersMap() {
- var data = google.visualization.arrayToDataTable([
+ var dataAsia = google.visualization.arrayToDataTable([
    ['City',  'Duration'],
    ['Yuanping', 6],
    ['Taiyuan',1],
@@ -25,13 +25,30 @@ function drawMarkersMap() {
    ['Changsha', 0.1],
    ['Seoul',0.1]
  ]);
+  var dataUSA = google.visualization.arrayToDataTable([
+   ['City',  'Duration'],
+   ['Seattle', 2],
+   ['Portland',0.1],
+   ['Boston',0.1],
+   ['Charlotteville',0.8],
+   ['Washington DC', 0.1],
+   ['Los Angles',0.1],
+ ]);
 
- var options = {
+
+ var optionsAsia = {
    region: '030',
+   displayMode: 'markers',
+   colorAxis: {colors: ['#e7711c', '#4374e0']}
+ };
+ var optionsUSA = {
+   region: '021',
    displayMode: 'markers',
    colorAxis: {colors: ['#e7711c', '#4374e0']}
  };
 
  var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
- chart.draw(data, options);
+ chart.draw(dataAsia, optionsAsia);
+ var chart = new google.visualization.GeoChart(document.getElementById('map_usa'));
+ chart.draw(dataUSA,optionsUSA);
 };
