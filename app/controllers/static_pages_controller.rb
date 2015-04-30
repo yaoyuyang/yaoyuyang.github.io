@@ -5,10 +5,7 @@ class StaticPagesController < ApplicationController
   def education
   end
 
-  def research
-  end
-
-  def travel
+  def projects
   end
 
   def more

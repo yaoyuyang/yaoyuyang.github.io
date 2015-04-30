@@ -63,7 +63,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: purple; 
+    color: #00FFFF; 
     text-decoration: none;
   }
 }
@@ -98,4 +98,20 @@ footer {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
+}
+
+.project-figure-right {
+  float: right;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  background: white;
+}
+
+.main-figure-left {
+  float: left;
+  padding: 10px;
+  padding-right: 30px;
+  width: 30%;
+  background: white;
 }
