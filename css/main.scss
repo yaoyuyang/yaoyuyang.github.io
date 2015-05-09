@@ -99,6 +99,16 @@ footer {
   }
 }
 
+ul.list {
+  li {
+    width: auto;
+    float: left;
+    margin-left: -40px;
+    margin-right: 50px
+  }
+}
+
+
 .address {
   list-style-type: none;
   padding: 0px;
