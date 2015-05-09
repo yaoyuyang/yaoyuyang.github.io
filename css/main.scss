@@ -2,6 +2,7 @@
 ---
 
 @import "bootstrap";
+@import "bootstrap/glyphicons";
 $grayMediumLight: #eaeaea;
 /* universal */
 
@@ -103,6 +104,16 @@ footer {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
+}
+
+.pubs li {
+  list-style-type: square;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.pubs .num {
+  color: #aaa;
 }
 
 .project-figure-right {
