@@ -5732,7 +5732,14 @@ ul.list li {
 .project-figure-right {
   float: right;
   padding: 10px;
-  margin: 5px;
+  margin-top: -10px;
+  width: 30%;
+  background: white; }
+
+.project-figure-right-higher {
+  float: right;
+  padding: 10px;
+  margin-top: -40px;
   width: 30%;
   background: white; }
 

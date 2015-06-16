@@ -66,7 +66,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: #00FFFF; 
+    color: #00FFFF;
     text-decoration: none;
   }
 }
@@ -128,10 +128,19 @@ ul.list {
 .project-figure-right {
   float: right;
   padding: 10px;
-  margin: 5px;
+  margin-top: -10px;
   width: 30%;
   background: white;
 }
+
+.project-figure-right-higher {
+  float: right;
+  padding: 10px;
+  margin-top: -40px;
+  width: 30%;
+  background: white;
+}
+
 
 .main-figure-left {
   float: left;
@@ -140,4 +149,3 @@ ul.list {
   width: 30%;
   background: white;
 }
-
