@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Slate Example Configuration</title>
+  <title>CatchOneBus Settings</title>
   <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
   <script src='js/slate.min.js'></script>
   <style>
@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <h1 class='title'>Slate Example Configuration</h1>
+    <h1 class='title'>CatchOneBus Settings</h1>
 
     <div class='item-container'>
       <div class='item-container-content'>
@@ -64,7 +64,7 @@
   function getConfigData() {
     var backgroundColorPicker = document.getElementById('background_color_picker');
     var highContrastCheckbox = document.getElementById('high_contrast_checkbox');
- 
+
     var options = {
       'background_color': backgroundColorPicker.value,
       'high_contrast': highContrastCheckbox.checked
@@ -89,7 +89,7 @@
     }
     return defaultValue || false;
   }
- 
+
   var submitButton = document.getElementById('submit_button');
   submitButton.addEventListener('click', function() {
     console.log('Submit');
