@@ -141,6 +141,7 @@
   right: 0;
   left: 0;
   z-index: $zindex-navbar-fixed;
+  height: 20px;
 
   // Undo the rounded corners
   @media (min-width: $grid-float-breakpoint) {
