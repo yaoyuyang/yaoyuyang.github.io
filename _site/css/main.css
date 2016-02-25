@@ -3666,8 +3666,7 @@ tbody.collapse.in {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
-  height: 20px; }
+  z-index: 1030; }
   @media (min-width: 768px) {
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -3680,7 +3679,8 @@ tbody.collapse.in {
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
-  border-width: 1px 0 0; }
+  border-width: 1px 0 0;
+  height: 30px; }
 
 .navbar-brand {
   float: left;
