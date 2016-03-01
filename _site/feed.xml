@@ -6,12 +6,12 @@
 </description>
     <link>http://yaoyuyang.com/</link>
     <atom:link href="http://yaoyuyang.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Feb 2016 15:00:56 -0800</pubDate>
-    <lastBuildDate>Mon, 29 Feb 2016 15:00:56 -0800</lastBuildDate>
+    <pubDate>Mon, 29 Feb 2016 16:03:06 -0800</pubDate>
+    <lastBuildDate>Mon, 29 Feb 2016 16:03:06 -0800</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
-        <title>Starting to blog and code to determine leap year!</title>
+        <title>Starting to blog and code snippets to determine leap year!</title>
         <description>&lt;p&gt;It&#39;s the last day of February in 2016. This year is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Leap_year&quot;&gt;leap year&lt;/a&gt; so there is one extra day in February. The algorithm to determine a leap year is as follows: A year will be a leap year if it is divisible by 4 but not by 100. If a year is divisible by 4 and by 100, it is not a leap year unless it is also divisible by 400. It&#39;s a very simple algorithm, a very &quot;naive&quot; Ruby function to determine leap year will be like:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;leap_year?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;

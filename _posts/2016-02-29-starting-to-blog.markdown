@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:      "Starting to blog and code to determine leap year!"
-subtitle:   "Dedicated to learning and sharing!"
+title:      "Starting to blog and code snippets to determine leap year!"
 date:       2016-02-28 24:00:00
 author:     "Yaoyu Yang"
 header-img: "images/Pensieve2.jpg"
