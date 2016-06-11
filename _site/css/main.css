@@ -5774,3 +5774,27 @@ a.anchor {
   display: block;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
+
+/* centered columns styles */
+.row-centered {
+  text-align: center; }
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  /* inline-block space fix */ }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
