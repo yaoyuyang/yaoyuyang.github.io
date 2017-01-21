@@ -6,7 +6,7 @@ author:     "Yaoyu Yang"
 header-img: ""
 ---
 
-The problem arose when I was working on a web application using Node.js and Angular JS, where I need to read multiple files in a directory, process the contents in all files aggregately, and write processed content into a new file. This problem is s
+The problem arose when I was working on a web application using Node.js and Angular JS, where I need to read multiple files in a directory, process the contents in all files aggregately, and write processed content into a new file. This problem is similar to [this stackoverflow question](http://stackoverflow.com/questions/10049557/reading-all-files-in-a-directory-store-them-in-objects-and-send-the-object).
 
 The specific problem I encountered was as follows. I have a list of json files in a directory each describe details of a fish with id, images, name, etc.
 
