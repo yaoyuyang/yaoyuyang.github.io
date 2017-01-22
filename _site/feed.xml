@@ -6,13 +6,13 @@
 </description>
     <link>http://yaoyuyang.com/</link>
     <atom:link href="http://yaoyuyang.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Jan 2017 00:18:51 -0800</pubDate>
-    <lastBuildDate>Sat, 21 Jan 2017 00:18:51 -0800</lastBuildDate>
+    <pubDate>Sat, 21 Jan 2017 19:08:49 -0800</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 19:08:49 -0800</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>How to read multiple files in Node.js asynchronously and process all file contents synchronously?</title>
-        <description>&lt;p&gt;The problem arose when I was working on a web application using Node.js and Angular JS, where I need to read multiple files in a directory, process the contents in all files aggregately, and write processed content into a new file. This problem is similar to &lt;a href=&quot;http://stackoverflow.com/questions/10049557/reading-all-files-in-a-directory-store-them-in-objects-and-send-the-object&quot;&gt;this stackoverflow question&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;The problem arose when I was working on a web application using Node.js and Angular JS, where I need to read multiple files in a directory, process the contents in all files aggregately, and write processed content into a new file. This problem is similar to &lt;a href=&quot;http://stackoverflow.com/questions/10049557/reading-all-files-in-a-directory-store-them-in-objects-and-send-the-object&quot;&gt;this stackoverflow question (“Reading all files in a directory, store them in objects, and send the object in node.js”)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The specific problem I encountered was as follows. I have a list of json files in a directory each describe details of a fish with id, images, name, etc.&lt;/p&gt;
 
@@ -143,7 +143,7 @@
     
       <item>
         <title>How to DIY internationalize/translate your iOS app?</title>
-        <description>&lt;p&gt;I have been working on an iOS app called &lt;a href=&quot;https://itunes.apple.com/us/app/fishtoxicity/id1078063422?ls=1&amp;amp;mt=8&quot;&gt;FishToxicity&lt;/a&gt; primarily designed for pregnant women to check mercury level in fish with data from FDA. Recently, I have feedback from users in China asking for Chinese translations of the app. It seems a straightforward process but it turns out there is not a super good tutorial to guide you through the process. During my learning process, I figured out a pretty neat way to add these translations based on this simple framework called &lt;a href=&quot;https://github.com/marmelroy/Localize-Swift&quot;&gt;Localize-Swift&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;I have been working on an iOS app called &lt;a href=&quot;https://itunes.apple.com/us/app/fishtoxicity/id1078063422?ls=1&amp;amp;mt=8&quot;&gt;FishToxicity&lt;/a&gt; primarily designed for pregnant women to check mercury level in fish with data from FDA. Recently, I have feedback from users in China asking for Chinese translations of the app. It seems a straightforward process but it turns out there is not a super good tutorial to guide you through the process. During my learning process, I figured out a pretty neat way to add these translations based on this simple framework called &lt;a href=&quot;https://github.com/marmelroy/Localize-Swift&quot;&gt;Localize-Swift&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Sep 2016 05:00:00 -0700</pubDate>
         <link>http://yaoyuyang.com/2016/09/22/internationalization-for-iOS-app.html</link>
