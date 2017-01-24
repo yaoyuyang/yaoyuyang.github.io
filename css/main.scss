@@ -21,6 +21,13 @@ textarea {
   resize: vertical;
 }
 
+.imgAbt a {
+  img {
+    display:block;
+    margin:auto;
+  }
+}
+
 .center {
   text-align: center;
   h1 {
@@ -41,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
