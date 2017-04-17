@@ -17,7 +17,7 @@ This serves as the Part I of this tutorial aiming to provide a step by step guid
 # Setting up Amazon EC2
 Amazon EC2 (Elastic Compute Cloud) is a virtual computer in the cloud that can run user's own computer applications. EC2 is one of the most popular services provided by Amazon Web Services (AWS). AWS provides a large list of services related to cloud computing. With the right environment setup, we can run our AngularJS app on an Amazon EC2 instance. Let's set up our Amazon EC2. There are two steps to set up an EC2 instance if you are new to AWS.
 
-## Create AWS account
+## Create an AWS account
 First, you need to create an AWS account. Follow the following steps.
 
 * Go to [AWS](https://aws.amazon.com/) and click Create an AWS account. 
@@ -31,7 +31,7 @@ First, you need to create an AWS account. Follow the following steps.
 * Click Complete Sign Up. It will redirect you to the login page and now you should see the following AWS home page.
 ![AWS home](/images/blog/aws_home.png){:class="img-responsive"}
 
-### Create an EC2 instance and connect to it
+## Create an EC2 instance and connect to it
 Second, let's create an EC2 instance.
 
 * Click Services on the top left menu, then click EC2

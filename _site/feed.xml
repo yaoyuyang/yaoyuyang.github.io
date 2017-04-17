@@ -6,8 +6,8 @@
 </description>
     <link>http://yaoyuyang.com/</link>
     <atom:link href="http://yaoyuyang.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Apr 2017 21:53:06 -0400</pubDate>
-    <lastBuildDate>Sat, 15 Apr 2017 21:53:06 -0400</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2017 20:44:39 -0400</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2017 20:44:39 -0400</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -25,7 +25,7 @@
 &lt;h1 id=&quot;setting-up-amazon-ec2&quot;&gt;Setting up Amazon EC2&lt;/h1&gt;
 &lt;p&gt;Amazon EC2 (Elastic Compute Cloud) is a virtual computer in the cloud that can run user’s own computer applications. EC2 is one of the most popular services provided by Amazon Web Services (AWS). AWS provides a large list of services related to cloud computing. With the right environment setup, we can run our AngularJS app on an Amazon EC2 instance. Let’s set up our Amazon EC2. There are two steps to set up an EC2 instance if you are new to AWS.&lt;/p&gt;
 
-&lt;h2 id=&quot;create-aws-account&quot;&gt;Create AWS account&lt;/h2&gt;
+&lt;h2 id=&quot;create-an-aws-account&quot;&gt;Create an AWS account&lt;/h2&gt;
 &lt;p&gt;First, you need to create an AWS account. Follow the following steps.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -41,7 +41,7 @@
 &lt;img src=&quot;/images/blog/aws_home.png&quot; alt=&quot;AWS home&quot; class=&quot;img-responsive&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;create-an-ec2-instance-and-connect-to-it&quot;&gt;Create an EC2 instance and connect to it&lt;/h3&gt;
+&lt;h2 id=&quot;create-an-ec2-instance-and-connect-to-it&quot;&gt;Create an EC2 instance and connect to it&lt;/h2&gt;
 &lt;p&gt;Second, let’s create an EC2 instance.&lt;/p&gt;
 
 &lt;ul&gt;
