@@ -7,7 +7,7 @@ header-img: ""
 ---
 
 # Introduction
-A few months ago, I deployed an AngularJS app called [SeafoodCheck](http://seafoodcheck.com) on an Amazon EC2 instance. It wasn't a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was three months ago, I created this "Deploying an AngularJS app to Amazon EC2" tutorial.
+A few months ago, I deployed an AngularJS app called [SeafoodCheck](http://seafoodcheck.com) on an Amazon EC2 instance. It wasn't a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was, I created this "Deploying an AngularJS app to Amazon EC2" tutorial.
 
 This serves as the Part I of this tutorial aiming to provide a step by step guide in getting an Amazon EC2 instance set up for those who have little experience of AWS. It can also be served as a stand alone tutorial for those who are just interested in learning how to create an AWS account and getting an EC2 instance setup.
 
