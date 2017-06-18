@@ -1,23 +1,37 @@
 ---
 layout:     post
-title:      "Deploying an AngularJS app to Amazon EC2 (Part I)"
-date:       2017-04-15 12:00:00
+title:      "Deploying an AngularJS app to Amazon EC2"
+date:       2017-04-18 12:00:00
 author:     "Yaoyu Yang"
 header-img: ""
 ---
 
 # Introduction
-A few months ago, I deployed an AngularJS app called [SeafoodCheck](http://seafoodcheck.com) on an Amazon EC2 instance. It wasn't a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was three months ago, I created this "Deploying an AngularJS app to Amazon EC2" tutorial.
-
-This serves as the Part I of this tutorial aiming to provide a step by step guide in getting an Amazon EC2 instance set up for those who have little experience of AWS. It can also be served as a stand alone tutorial for those who are just interested in learning how to create an AWS account and getting an EC2 instance setup.
+Recently I deployed an AngularJS app called [SeafoodCheck](http://seafoodcheck.com) on an Amazon EC2 instance. It wasn't a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. This tutorial aims to provide a step by step guide in getting an AngularJS app running on Amazon EC2 for those who have little experience of Amazon Web Services.
 
 # Prerequisites 
-* Know how to execute commands in a shell
+* Basic Git knowledge and a working Github account. [Hello World](https://guides.github.com/activities/hello-world/) on Git and Github if you need.
+* Basic command line knowledge
+* Basic knowledge of Node.js
+
+# Setting up your initial code
+For this tutorial, we'll be using the [PhoneCat Tutorial App](https://github.com/angular/angular-phonecat) from AngularJS. This is the offical [tutorial](https://docs.angularjs.org/tutorial/) from AngularJS, highly recommend to go through if you are starting on AgularJS.
+
+To begin, let's [fork](https://help.github.com/articles/fork-a-repo/) [PhoneCat Tutorial App](https://github.com/angular/angular-phonecat) on Github.
+Now clone your forked repo into a local directory and run `npm start`.
+
+{% highlight bash %}
+git clone https://github.com/yaoyuyang/angular-phonecat.git
+cd angular-phonecat
+npm start
+{% endhighlight %}
+
+Now navigate your browser to [http://localhost:8000](http://localhost:8000) to see the application running.
 
 # Setting up Amazon EC2
 Amazon EC2 (Elastic Compute Cloud) is a virtual computer in the cloud that can run user's own computer applications. EC2 is one of the most popular services provided by Amazon Web Services (AWS). AWS provides a large list of services related to cloud computing. With the right environment setup, we can run our AngularJS app on an Amazon EC2 instance. Let's set up our Amazon EC2. There are two steps to set up an EC2 instance if you are new to AWS.
 
-## Create an AWS account
+## Create AWS account
 First, you need to create an AWS account. Follow the following steps.
 
 * Go to [AWS](https://aws.amazon.com/) and click Create an AWS account. 
@@ -31,7 +45,7 @@ First, you need to create an AWS account. Follow the following steps.
 * Click Complete Sign Up. It will redirect you to the login page and now you should see the following AWS home page.
 ![AWS home](/images/blog/aws_home.png){:class="img-responsive"}
 
-## Create an EC2 instance and connect to it
+### Create an EC2 instance and connect to it
 Second, let's create an EC2 instance.
 
 * Click Services on the top left menu, then click EC2
@@ -44,7 +58,5 @@ Second, let's create an EC2 instance.
 ![AWS EC2 Creation Choose T1](/images/blog/choose_t1.png){:class="img-responsive"}
 * Now go back to your AWS management console, click EC2, and you should see that you have 1 running instance. You have successfully created an EC2 instance! Click Connect button near Lanuch Instance button. AWS provides you a step by step instruction for how to connect to this instance using ssh, providing that you have access to an Unix or Unix-like shell. Follow it and you should be able ssh into your instance on AWS! Check [this tutorial](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console) if you have a PC running Windows.
 ![AWS EC2 instance](/images/blog/running_instance.png){:class="img-responsive"}
-* Now you should be connected to your EC2 instance with a fully loaded Linux machine at your disposal! Congratualations on acheiving this step!
-![Ubuntu](/images/blog/ubuntu.png){:class="img-responsive"}
 
 

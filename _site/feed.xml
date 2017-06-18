@@ -6,14 +6,90 @@
 </description>
     <link>http://yaoyuyang.com/</link>
     <atom:link href="http://yaoyuyang.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Apr 2017 20:44:39 -0400</pubDate>
-    <lastBuildDate>Sun, 16 Apr 2017 20:44:39 -0400</lastBuildDate>
+    <pubDate>Sat, 17 Jun 2017 22:07:19 -0400</pubDate>
+    <lastBuildDate>Sat, 17 Jun 2017 22:07:19 -0400</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Deploying an AngularJS app to Amazon EC2 (Part II)</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;A few months ago, I deployed an AngularJS app called &lt;a href=&quot;http://seafoodcheck.com&quot;&gt;SeafoodCheck&lt;/a&gt; on an Amazon EC2 instance. It wasn’t a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was three months ago, I created this “Deploying an AngularJS app to Amazon EC2” tutorial.&lt;/p&gt;
+
+&lt;p&gt;This serves as the Part II of this tutorial aiming to provide a step by step guide in running an Angular JS app on an Amazon EC2 instance. If you don’t know how to set up an Amazon EC instance, &lt;a href=&quot;/2017/04/15/how-to-create-and-connect-to-an-AWS-EC2-instance.html&quot;&gt;Part I&lt;/a&gt; of the tutorial published ealier described how to set up an Amazon EC2 instance.&lt;/p&gt;
+
+&lt;h1 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;An AWS EC2 instance set up&lt;/li&gt;
+  &lt;li&gt;Basic Git knowledge and a working Github account. &lt;a href=&quot;https://guides.github.com/activities/hello-world/&quot;&gt;Hello World&lt;/a&gt; on Git and Github if you need.&lt;/li&gt;
+  &lt;li&gt;Basic command line knowledge&lt;/li&gt;
+  &lt;li&gt;Basic knowledge of Node.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;fork-angularjs-app-code&quot;&gt;Fork AngularJS app code&lt;/h1&gt;
+&lt;p&gt;For this tutorial, we’ll be using the &lt;a href=&quot;https://github.com/angular/angular-phonecat&quot;&gt;PhoneCat Tutorial App&lt;/a&gt; from AngularJS. This is the offical &lt;a href=&quot;https://docs.angularjs.org/tutorial/&quot;&gt;tutorial&lt;/a&gt; from AngularJS. I highly recommend you to go through if you are starting on AgularJS.&lt;/p&gt;
+
+&lt;p&gt;To begin, let’s &lt;a href=&quot;https://help.github.com/articles/fork-a-repo/&quot;&gt;fork&lt;/a&gt; &lt;a href=&quot;https://github.com/angular/angular-phonecat&quot;&gt;PhoneCat Tutorial App&lt;/a&gt; on Github. You should then have a repo under your name like &lt;a href=&quot;https://github.com/yaoyuyang/angular-phonecat&quot;&gt;this&lt;/a&gt; forked from angular/angular-phonecat.&lt;/p&gt;
+
+&lt;h1 id=&quot;ssh-into-ec2-and-git-clone-code&quot;&gt;SSH into EC2 and git clone code&lt;/h1&gt;
+&lt;p&gt;Now SSH into your EC2 instance. Type &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; to see the directories. You should see something like the following:
+&lt;img src=&quot;/images/blog/sshls.png&quot; alt=&quot;sshls&quot; class=&quot;img-responsive&quot; /&gt;
+Now do the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;apps
+sudo chown -R bitnami /opt/bitnami
+sudo chown -R bitnami /home/bitnami
+git clone https://github.com/yaoyuyang/angular-phonecat &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;USE YOUR LINK&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;chown&lt;/code&gt; steps are very important since the default owner for these two directories, which will be used later to write files, are root. If you don’t change the ownership, you have to install everything under root and a lot of permission problems will pop up later.&lt;/p&gt;
+
+&lt;h1 id=&quot;run-the-app&quot;&gt;Run the app&lt;/h1&gt;
+&lt;p&gt;Before you run the app, edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; using your favorite editor. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0.0&lt;/code&gt;. This step and the Security Access steps in the next section expose your app to the public internet.&lt;/p&gt;
+
+&lt;p&gt;Now you can run the app by the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;angular-phonecat
+npm start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see something in the terminal like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Starting up http-server, serving ./app
+Available on:
+  http://127.0.0.1:8000
+  http://172.31.6.114:8000 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;This will be your private IPs&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;security-access&quot;&gt;Security Access&lt;/h1&gt;
+&lt;p&gt;Your Angular app is now running. However, you need to configure the security access on AWS before you can let the world to see your app for real.&lt;/p&gt;
+
+&lt;p&gt;Open up your AWS EC2 dashboard, click Security Groups on the left panel. Click on the row that has Group name MEAN powered by Bitnami. Then click the inbound tab beneath. We need to customize the rules to make port 8000 accessible. Click Add Rule, leave Protocol default as TCP, in Port Range enter 8000, and Source choose Anywhere. Click Save. Refresh and you should see the following:
+&lt;img src=&quot;/images/blog/security-access.png&quot; alt=&quot;security-access&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;check-out-your-running-app-on-browser&quot;&gt;Check out your running app on browser&lt;/h1&gt;
+&lt;p&gt;After we give the security access. We can now access our app through a brower. Type in your Public DNS:8000. In my case it’s &lt;a href=&quot;http://ec2-34-210-41-187.us-west-2.compute.amazonaws.com:8000&quot;&gt;http://ec2-34-210-41-187.us-west-2.compute.amazonaws.com:8000&lt;/a&gt;. Hooray! You should now see the Google Phone Gallery up!
+&lt;img src=&quot;/images/blog/phone-cat-runnng.png&quot; alt=&quot;phone-cat-runnng&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;forever-run&quot;&gt;Forever run&lt;/h1&gt;
+&lt;p&gt;To keep the app running continuouly without being affected by logging out of EC2 instance. We use the node package &lt;code class=&quot;highlighter-rouge&quot;&gt;forever.js&lt;/code&gt;. First &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+c&lt;/code&gt; to stop the existing app running. Install the package:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo npm install forever -g&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And then start the app by:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;forever start ./node_modules/http-server/bin/http-server ./app -p 8000 -d &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To stop the app. Use &lt;code class=&quot;highlighter-rouge&quot;&gt;forever list&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;forever stop&lt;/code&gt; with the id, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;forever stop 12305&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 15 Jun 2017 08:00:00 -0400</pubDate>
+        <link>http://yaoyuyang.com/2017/06/15/how-run-angular-app-on-AWS-EC2-instance.html</link>
+        <guid isPermaLink="true">http://yaoyuyang.com/2017/06/15/how-run-angular-app-on-AWS-EC2-instance.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Deploying an AngularJS app to Amazon EC2 (Part I)</title>
         <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Three months ago, I deployed an AngularJS app called &lt;a href=&quot;http://seafoodcheck.com&quot;&gt;SeafoodCheck&lt;/a&gt; on an Amazon EC2 instance. It wasn’t a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was three months ago, I created this “Deploying an AngularJS app to Amazon EC2” tutorial.&lt;/p&gt;
+&lt;p&gt;A few months ago, I deployed an AngularJS app called &lt;a href=&quot;http://seafoodcheck.com&quot;&gt;SeafoodCheck&lt;/a&gt; on an Amazon EC2 instance. It wasn’t a trivial task and I had to go through various tutorial and stackoverflow pages to get it working. To help people in similar positions as I was three months ago, I created this “Deploying an AngularJS app to Amazon EC2” tutorial.&lt;/p&gt;
 
 &lt;p&gt;This serves as the Part I of this tutorial aiming to provide a step by step guide in getting an Amazon EC2 instance set up for those who have little experience of AWS. It can also be served as a stand alone tutorial for those who are just interested in learning how to create an AWS account and getting an EC2 instance setup.&lt;/p&gt;
 
