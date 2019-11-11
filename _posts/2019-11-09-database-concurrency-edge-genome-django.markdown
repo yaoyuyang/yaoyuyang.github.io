@@ -68,4 +68,4 @@ After this change, the log looks as expected when we make two concurrent genome 
 * One trick to solve the concurrency problem is to lock common resources during database traction, even the common resources are not the resources to be updated in the transaction. Here we used this trick to find the root genome that is common and locked it.
 * `select_for_update` lock only happens when the Django queryset is [evaluated](https://docs.djangoproject.com/en/2.2/ref/models/querysets/#when-querysets-are-evaluated).
 
-
+P.S. My team at [Ginkgo Bioworks](https://www.ginkgobioworks.com/) is hiring for dev positions at all levels. If you are interested in building software to engineer biology to make a dent in the universe, check out [here](https://www.ginkgobioworks.com/careers/)!
