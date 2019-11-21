@@ -60,6 +60,7 @@ will actually not lock the root genome since the queryset is not actually evalua
 {% highlight python %}
 genomes = Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 # Lock only happens when queryset is evaluated, therefore need to do at least genomes[0]
+
 genome = genomes[0]
 {% endhighlight %}
 After this change, the log looks as expected when we make two concurrent genome changes that share the same root genome. Problem solved!
