@@ -56,9 +56,8 @@ This means that the lock on root genome `g0` did not happen. So we started to ta
 {% highlight python %}
 Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 {% endhighlight %}
-will actually not lock the root genome since the queryset is not actually evaluated. Then we went on and updated the code in this [Pull Request](https://github.com/ginkgobioworks/edge/pull/35) where we basically did:
+will actually not lock the root genome since the queryset is not actually evaluated. Then we went on and updated the code in this [Pull Request](https://github.com/ginkgobioworks/edge/pull/35). Lock only happens when queryset is evaluated, therefore need to do at least `genomes[0]`.
 {% highlight python %}
-# Lock only happens when queryset is evaluated, therefore need to do at least genomes[0]
 genomes = Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 genome = genomes[0]
 {% endhighlight %}
