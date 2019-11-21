@@ -58,9 +58,8 @@ Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 {% endhighlight %}
 will actually not lock the root genome since the queryset is not actually evaluated. Then we went on and updated the code in this [Pull Request](https://github.com/ginkgobioworks/edge/pull/35) where we basically did:
 {% highlight python %}
-genomes = Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 # Lock only happens when queryset is evaluated, therefore need to do at least genomes[0]
-
+genomes = Genome.objects.select_for_update().filter(pk=find_root_genome(genome).id)
 genome = genomes[0]
 {% endhighlight %}
 After this change, the log looks as expected when we make two concurrent genome changes that share the same root genome. Problem solved!
