@@ -16,7 +16,7 @@ Array.from(document.querySelectorAll('div > div > div.col-sm-12.col-md-3.pad-0-l
 {% endhighlight %}
 After you run the script, you should see all added offers appear in the Added to Card tab.
 # An even better solution using Bookmarklet
-So I showed this script to my friend Henan and he came up an even better solution utilizing this script with [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet). This allows you to run the script with one click on the bookmark section. This is much easier than going to developer console and run code. Follow the steps below:
+So I showed this script to my friend Henan Li and he came up an even better solution utilizing this script with [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet). This allows you to run the script with one click on the bookmark section. This is much easier than going to developer console and run code. Follow the steps below:
 * Create new bookmark in Chrome by right click on bookmark section -> Add Page. If you use other browers, just add a new bookmark following other browers' UI.
 * Enter a name you like (e.g. I name it Add Amex offer), enter the following line in the URL section.
 {% highlight javascript %}
