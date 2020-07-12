@@ -23,6 +23,7 @@ So I showed this script to my friend Henan and he came up an even better solutio
 javascript:(function(){Array.from(document.querySelectorAll('div > div > div.col-sm-12.col-md-3.pad-0-l > div > button')).map(a => a.click())})()
 {% endhighlight %}
 * Go to Amex website, log in to your account, click View All to load all the offers, click this bookmark, wait a bit and all your offers will be added automatically.
+
 # How it works
 The script uses [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) to find all the elements that match [CSS selector](https://www.w3schools.com/css/css_selectors.asp) pattern of the `Add to Card` button, turn them into an [Array](https://developer.mozilla.org/en-US/docs/Glossary/array), and then apply `.click()` on each element to click the button. By running the script, you are basically using the script to click the buttons for you and this saves you from manually clicking the buttons one at a time.
 # Shortcoming
