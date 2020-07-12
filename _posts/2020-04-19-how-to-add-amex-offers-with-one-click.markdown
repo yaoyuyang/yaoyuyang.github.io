@@ -15,6 +15,14 @@ A solution I came up is to run the following Javascript oneliner script in your 
 Array.from(document.querySelectorAll('div > div > div.col-sm-12.col-md-3.pad-0-l > div > button')).map(a => a.click())
 {% endhighlight %}
 After you run the script, you should see all added offers appear in the Added to Card tab.
+# An even better solution using Bookmarklet
+So I showed this script to my friend Henan and he came up an even better solution utilizing this script with [Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet). This allows you to run the script with one click on the bookmark section. This is much easier than going to developer console and run code. Follow the steps below:
+* Create new bookmark in Chrome by right click on bookmark section -> Add Page. If you use other browers, just add a new bookmark following other browers' UI.
+* Enter a name you like (e.g. I name it Add Amex offer), enter the following line in the URL section.
+{% highlight javascript %}
+javascript:(function(){Array.from(document.querySelectorAll('div > div > div.col-sm-12.col-md-3.pad-0-l > div > button')).map(a => a.click())})()
+{% endhighlight %}
+* Go to Amex website, log in to your account, click View All to load all the offers, click this bookmark, wait a bit and all your offers will be added automatically.
 # How it works
 The script uses [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) to find all the elements that match [CSS selector](https://www.w3schools.com/css/css_selectors.asp) pattern of the `Add to Card` button, turn them into an [Array](https://developer.mozilla.org/en-US/docs/Glossary/array), and then apply `.click()` on each element to click the button. By running the script, you are basically using the script to click the buttons for you and this saves you from manually clicking the buttons one at a time.
 # Shortcoming
